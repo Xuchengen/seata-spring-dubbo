@@ -1,16 +1,5 @@
 language: java
 
-sudo: false
-
 install: false
 
-jdk:
-  - openjdk8
-
-notifications:
-  email: false
-
-cache:
-  directories:
-    - '$HOME/.m2'
-
+jdk: openjdk8
