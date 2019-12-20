@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.xuchengen.server.order.dao.mapper.OrderDOMapper">
+    <resultMap id="BaseResultMap" type="com.github.xuchengen.server.order.dao.model.OrderDO">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="commodity_code" jdbcType="VARCHAR" property="commodityCode"/>
+        <result column="count" jdbcType="INTEGER" property="count"/>
+        <result column="money" jdbcType="INTEGER" property="money"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, user_id, commodity_code, count, money
+    </sql>
+
+    <!--创建订单-->
+    <insert id="createOrder" keyProperty="id" useGeneratedKeys="true">
+        insert into order_tbl
+        values(null,#{userId},#{commodityCode},${count},${amount})
+    </insert>
+
+</mapper>

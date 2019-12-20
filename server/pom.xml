@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>seata-spring-dubbo</artifactId>
+        <groupId>com.github.xuchengen</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>server</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>account-server</module>
+        <module>order-server</module>
+        <module>storage-server</module>
+        <module>app-server</module>
+    </modules>
+
+    <dependencies>
+        <!-- spring全家桶 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
+        <!-- spring boot 生态整合组件 -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- zookeeper -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+
+        <!-- 分布式事务解决方案 -->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-all</artifactId>
+        </dependency>
+
+        <!-- 工具类库 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <!-- Facade -->
+        <dependency>
+            <groupId>com.github.xuchengen</groupId>
+            <artifactId>account-facade</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xuchengen</groupId>
+            <artifactId>order-facade</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xuchengen</groupId>
+            <artifactId>storage-facade</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
